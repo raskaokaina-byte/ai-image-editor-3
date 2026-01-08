@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Image Editor PRO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>AI Image Editor — PRO</h1>
+<p>Edit gambar pakai ChatGPT (tanpa Photoshop)</p>
+
+<input type="file" id="imageInput" accept="image/*">
+<img id="preview" />
+
+<h3>Pilih Jenis Edit</h3>
+<label><input type="checkbox" value="Hapus background, buat transparan dan rapi."> Hapus Background</label><br>
+<label><input type="checkbox" value="Tingkatkan kualitas dan ketajaman gambar."> Tingkatkan Kualitas</label><br>
+<label><input type="checkbox" value="Ganti background studio profesional."> Ganti Background</label><br>
+<label><input type="checkbox" value="Perhalus wajah secara natural."> Edit Wajah</label>
+
+<h3>Prompt Otomatis</h3>
+<textarea id="prompt" rows="6"></textarea>
+
+<br>
+<button onclick="generatePrompt()">Generate Prompt</button>
+<button onclick="openChatGPT()">Edit via ChatGPT</button>
+
+<script src="script.js"></script>
+</body>
+</html>

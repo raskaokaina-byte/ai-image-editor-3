@@ -1,0 +1,19 @@
+const input = document.getElementById("imageInput");
+const preview = document.getElementById("preview");
+
+input.addEventListener("change", () => {
+  const file = input.files[0];
+  preview.src = URL.createObjectURL(file);
+  preview.style.display = "block";
+});
+
+function generatePrompt() {
+  const checks = document.querySelectorAll("input[type=checkbox]:checked");
+  let text = "Edit gambar ini:\n";
+  checks.forEach(c => text += "- " + c.value + "\n");
+  document.getElementById("prompt").value = text;
+}
+
+function openChatGPT() {
+  window.open("https://chat.openai.com", "_blank");
+}
